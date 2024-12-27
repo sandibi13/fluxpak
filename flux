@@ -182,7 +182,7 @@ if [[ -n $UPDATE ]]; then
         if [[ -n $PROMPTLESS ]]; then
             sudo dnf check-update && sudo dnf upgrade -y
         else
-            sudo apt check-update && sudo dnf upgrade
+            sudo dnf check-update && sudo dnf upgrade
         fi
     fi
     if command -v flatpak &> /dev/null; then
@@ -260,7 +260,7 @@ for i in "${flatpak_search_list[@]}"; do
     ((count++))
 done
 for i in "${dnf_search_list[@]}"; do
-    echo -e "[${BGreen}$count${NC}]: $i (${BGreen}apt${NC})"
+    echo -e "[${BGreen}$count${NC}]: $i (${BGreen}dnf${NC})"
     pkgs+=("$i")
     pkgrepo+=("dnf")
     ((count++))
@@ -314,7 +314,7 @@ for i in "${entered_input[@]}"; do
             sudo flatpak "${flatpak_cmd}" "${pkgs[i]}" -y
             ret=$?
             ;;
-        apt)
+        dnf)
             if command -v dnf &> /dev/null; then
                 sudo dnf "${dnf_cmd}" "${pkgs[i]}" -y
                 ret=$?
