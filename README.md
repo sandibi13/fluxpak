@@ -1,11 +1,11 @@
-# Flux
+# Fluxpak
 
 A package manager wrapper for DNF and Flatpak.
 
 ### Usage
 
 ```
-USAGE: flux [function] {flag} <input>
+USAGE: fluxpak [function] {flag} <input>
 
 functions:
     install: Install package(s) - Prompts user to respond with
@@ -27,7 +27,7 @@ functions:
 flags:
     --help/-h: Display this page
 
-    --description/-d: By default, flux will only display packages
+    --description/-d: By default, fluxpak will only display packages
     that contain <input> within their name. Use this flag to increase
     range and display packages with <input> in their description.
 
@@ -37,7 +37,7 @@ input:
     Provide a package name or description.
 
 Example execution:
-    $ flux install foobar
+    $ fluxpak install foobar
     Found packages matching 'foobar':
 
     [0]: pyfoobar (dnf)

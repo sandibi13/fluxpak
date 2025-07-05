@@ -2,7 +2,7 @@
 
 tabs -4
 
-export TEXTDOMAIN=flux
+export TEXTDOMAIN=fluxpak
 if [[ -n $FLUX_DEBUG ]]; then
     export TEXTDOMAINDIR="${PWD}/locale"
 else
@@ -66,12 +66,12 @@ Example execution:
     Are you sure? (${BGreen}y${NC}/${BRed}N${NC})
     [...]
 
-    _____.__
-  _/ ____\  |  __ _____  ___
-  \   __\|  | |  |  \  \/  /
-   |  |  |  |_|  |  />    <
-   |__|  |____/____//__/\_ \
-                          \/
+    _____.__                              __    
+  _/ ____\  |  __ _____  ______________  |  | __
+  \   __\|  | |  |  \  \/  /\____ \__  \ |  |/ /
+   |  |  |  |_|  |  />    < |  |_> > __ \|    < 
+   |__|  |____/____//__/\_ \|   __(____  /__|_ \
+                          \/|__|       \/     \/
 
 $(basename "$0") 0.1.0
 A package manager wrapper for DNF and Flatpak
